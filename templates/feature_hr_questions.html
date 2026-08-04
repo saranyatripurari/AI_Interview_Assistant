@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HR Questions — Practice behavioral and situational interview questions to improve your communication, storytelling, and interpersonal skills for job interviews.">
+    <title>HR Questions — Interview Assistant</title>
+
+    <link rel="icon" href="/static/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/feature_detail.css">
+
+    <style>
+        .star-breakdown {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 32px 28px;
+            max-width: 460px;
+        }
+        .star-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 20px;
+        }
+        .star-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .star-row:last-child { border-bottom: none; }
+        .star-letter {
+            min-width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563EB, #3B82F6);
+            color: #FFFFFF;
+            font-size: 15px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .star-row-body strong {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0F172A;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .star-row-body span {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .preview-two-col {
+            padding: 80px 32px;
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            gap: 64px;
+        }
+        .sample-q {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary-accent);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        .sample-q strong {
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-accent);
+            display: block;
+            margin-bottom: 4px;
+        }
+        @media (max-width: 768px) {
+            .preview-two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="/" class="logo">
+            <img src="/static/images/logo.svg" alt="Interview Assistant Logo" class="logo-img">
+            <span>Interview Assistant</span>
+        </a>
+        <nav>
+            <a href="/#home">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#features">Features</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+        <a href="/#interview" class="nav-cta">Start Interview</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="feature-hero">
+
+        <div class="feature-hero-left">
+            <a href="/" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+            <span class="feature-tag">Feature</span>
+            <h1>HR Questions</h1>
+            <p class="hero-desc">
+                Master the human side of interviews. Practice behavioral and situational questions that assess your communication, teamwork, leadership, and problem-solving skills — evaluated with AI precision.
+            </p>
+            <a href="/#interview" class="feature-hero-cta">
+                Start HR Mock <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="feature-hero-right">
+            <div class="illustration-wrap">
+                <i class="fa-solid fa-users illustration-icon"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- STAR + SAMPLES -->
+    <section class="preview-two-col">
+        <div>
+            <span class="fd-section-label">Answer Framework</span>
+            <h2 class="fd-section-title">The STAR Method</h2>
+            <p class="fd-section-desc" style="margin-bottom:28px;">AI feedback guides you to structure HR answers using the proven STAR framework used by professional recruiters.</p>
+            <div class="star-breakdown">
+                <div class="star-title">STAR Framework Breakdown</div>
+                <div class="star-row">
+                    <div class="star-letter">S</div>
+                    <div class="star-row-body">
+                        <strong>Situation</strong>
+                        <span>Set the context — describe the situation you were in.</span>
+                    </div>
+                </div>
+                <div class="star-row">
+                    <div class="star-letter">T</div>
+                    <div class="star-row-body">
+                        <strong>Task</strong>
+                        <span>Explain the task or challenge you needed to address.</span>
+                    </div>
+                </div>
+                <div class="star-row">
+                    <div class="star-letter">A</div>
+                    <div class="star-row-body">
+                        <strong>Action</strong>
+                        <span>Describe the specific actions you took to handle it.</span>
+                    </div>
+                </div>
+                <div class="star-row">
+                    <div class="star-letter">R</div>
+                    <div class="star-row-body">
+                        <strong>Result</strong>
+                        <span>Share the outcome and what you learned from it.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="fd-section-label">Sample HR Questions</span>
+            <h2 class="fd-section-title">What to Expect</h2>
+            <p class="fd-section-desc" style="margin-bottom:24px;">A preview of the types of behavioral and situational questions in the platform.</p>
+
+            <div class="sample-q">
+                <strong>Classic Behavioral</strong>
+                Tell me about a time when you had to work under pressure to meet a tight deadline. How did you manage it?
+            </div>
+            <div class="sample-q">
+                <strong>Conflict Resolution</strong>
+                Describe a situation where you disagreed with a team member or manager. How did you handle the disagreement?
+            </div>
+            <div class="sample-q">
+                <strong>Leadership</strong>
+                Give an example of a time you took initiative on a project without being asked. What was the result?
+            </div>
+            <div class="sample-q">
+                <strong>Self-Awareness</strong>
+                What is your greatest professional weakness, and what steps are you taking to address it?
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <div class="fd-section-alt">
+        <div class="fd-section-alt-inner">
+            <span class="fd-section-label">Benefits</span>
+            <h2 class="fd-section-title">Why Practice HR Questions</h2>
+            <p class="fd-section-desc">Technical skills get you shortlisted. HR skills get you hired. Both are equally important.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Communication Clarity</h3>
+                    <p>AI evaluates how clearly and confidently you express your thoughts, not just what you say.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>Behavioral Pattern Training</h3>
+                    <p>Practice crafting well-structured stories using the STAR method — the gold standard for HR interviews.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Confidence Building</h3>
+                    <p>Repeated exposure to difficult HR questions builds comfort and reduces anxiety in real interviews.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>AI-Powered Clarity Score</h3>
+                    <p>Gemini AI evaluates the structure, tone, and persuasiveness of your behavioral responses.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3>Wide Question Variety</h3>
+                    <p>From "tell me about yourself" to complex leadership scenarios — the full range of HR categories is covered.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Iterative Improvement</h3>
+                    <p>Practice across multiple sessions and track whether your communication quality is improving over time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="fd-section">
+        <span class="fd-section-label">How It Works</span>
+        <h2 class="fd-section-title">From Question to Confident Answer</h2>
+        <p class="fd-section-desc">HR mock interviews are structured to replicate the flow of a real behavioral round.</p>
+
+        <div class="steps-list">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-body">
+                    <h3>Start Any Interview Session</h3>
+                    <p>HR-type questions are included in every session regardless of role — because soft skills matter across all positions.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-body">
+                    <h3>Answer Behavioral Questions</h3>
+                    <p>Write your answer as you would in a real interview. Aim to use the STAR structure: Situation, Task, Action, Result.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-body">
+                    <h3>AI Evaluates Soft Skills</h3>
+                    <p>Gemini AI assesses clarity, structure, relevance, and emotional intelligence reflected in your answer.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-body">
+                    <h3>Get Communication Feedback</h3>
+                    <p>Your results highlight whether your answers were specific, well-structured, and impactful — with tips to sharpen them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fd-cta-section">
+        <div class="fd-cta-inner">
+            <h2>Nail Your HR Round</h2>
+            <p>Practice behavioral and situational questions now and build the communication skills that close offers.</p>
+            <div class="fd-cta-buttons">
+                <a href="/#interview" class="fd-cta-btn">
+                    Start HR Interview <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="/" class="fd-back-home-btn">
+                    <i class="fa-solid fa-house"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p class="copyright">© 2026 Saranya Tripurari. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:saranyatripurari@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://github.com/saranyatripurari" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/saranya-tripurari-85b5762a2" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/feature_detail.js"></script>
+</body>
+
+</html>

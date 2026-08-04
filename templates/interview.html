@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Interview Preparation — Practice Session">
+
+    <title>Interview Session | AI Interview Assistant</title>
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Interview Page CSS -->
+    <link rel="stylesheet" href="/static/css/interview.css">
+
+</head>
+
+<body>
+
+    <div class="interview-wrapper">
+
+        <form id="interviewForm" action="/submit/{{ session_id }}" method="post">
+
+            <!-- ===== TOP BAR: Role | Experience | Progress | Timer ===== -->
+            <header class="top-bar" id="topBar">
+
+                <div class="top-bar-left">
+                    <span class="role-badge">
+                        <i class="fa-solid fa-user-tie"></i>
+                        {{ role }}
+                    </span>
+                    <span class="exp-badge">
+                        <i class="fa-solid fa-chart-line"></i>
+                        {{ experience }}
+                    </span>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill" id="progress"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">0% Answered</span>
+                </div>
+
+                <div class="timer-box" id="timerBox">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="timer">30:00</span>
+                </div>
+
+            </header>
+
+
+            <!-- ===== ALL QUESTIONS — Vertical Scroll ===== -->
+            <div class="questions-list" id="questionsList">
+
+                {% for question in questions %}
+
+                <div class="question-block" id="qblock-{{ loop.index0 }}">
+
+                    <!-- Question Number Label -->
+                    <div class="question-number-label">
+                        <span class="qnum-circle">{{ loop.index }}</span>
+                        <span class="qnum-text">Question {{ loop.index }} of {{ questions|length }}</span>
+                    </div>
+
+                    <!-- Question Card -->
+                    <div class="question-card">
+                        <p class="question-text">{{ question }}</p>
+                    </div>
+
+                    <!-- Answer Box -->
+                    <div class="answer-card">
+                        <label for="answer-{{ loop.index0 }}" class="answer-label">
+                            <i class="fa-solid fa-pen"></i>
+                            Answer
+                        </label>
+                        <textarea
+                            name="answer_{{ loop.index0 }}"
+                            id="answer-{{ loop.index0 }}"
+                            placeholder="Type your answer here..."
+                            rows="6"></textarea>
+                        <div class="answer-footer">
+                            <span class="word-counter" id="wc-{{ loop.index0 }}">0 words</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- ===== SUBMIT BUTTON ===== -->
+            <div class="submit-row">
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Submit Interview
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- Loading Evaluation Overlay -->
+    <div class="loading-screen" id="loading">
+
+        <div class="loading-card">
+            <div class="spinner"></div>
+            <h2>Evaluating Your Responses...</h2>
+            <p>AI is analyzing your answers. Please wait.</p>
+        </div>
+
+    </div>
+
+
+    <script src="/static/js/interview.js"></script>
+
+</body>
+
+</html>

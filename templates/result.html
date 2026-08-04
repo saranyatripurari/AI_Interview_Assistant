@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Mock Interview Evaluation Report — Interview Assistant">
+
+    <title>Interview Results | AI Interview Assistant</title>
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Result Page Styles -->
+    <link rel="stylesheet" href="/static/css/result.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="result-navbar">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-cube"></i>
+        </div>
+        <span>Interview Assistant</span>
+    </div>
+
+    <div class="nav-right">
+        <span class="role-badge">
+            <i class="fa-solid fa-user-tie"></i>
+            {{ role }}
+        </span>
+        {% if round > 1 %}
+        <span class="round-badge">
+            Round {{ round }}
+        </span>
+        {% endif %}
+    </div>
+
+</header>
+
+
+
+<!-- ================= RESULT CONTAINER ================= -->
+
+<main class="result-container">
+
+    <!-- Hero Score Summary Card -->
+    <div class="score-card">
+
+        <div class="score-meta">
+            <span class="status-pill"><i class="fa-solid fa-check"></i> Evaluation Complete</span>
+            <h1>Interview Performance</h1>
+        </div>
+
+        <!-- Circular Score Gauge -->
+        <div class="score-circle-wrapper">
+            <div class="score-circle" id="scoreCircle">
+                <svg viewBox="0 0 160 160" class="score-svg">
+                    <circle cx="80" cy="80" r="70" class="score-track"/>
+                    <circle cx="80" cy="80" r="70" class="score-progress" id="scoreProgress"/>
+                </svg>
+                <div class="score-inner">
+                    <span class="score-num" id="scoreValue">{{ score }}</span>
+                    <span class="score-denom">/ 100</span>
+                </div>
+            </div>
+            <div class="score-label" id="scoreLabel">Overall Score</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- AI Feedback Section -->
+    <div class="feedback-card">
+
+        <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h2>AI Evaluation Feedback</h2>
+        </div>
+
+        <p class="feedback-text">{{ feedback }}</p>
+
+    </div>
+
+
+
+    <!-- Analysis Grid: Strengths & Areas to Improve -->
+    <div class="analysis-grid">
+
+        <!-- Strengths -->
+        <div class="analysis-card strengths-card">
+
+            <div class="card-header">
+                <div class="card-icon check-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Strengths</h2>
+            </div>
+
+            <ul class="analysis-list">
+                {% for item in strengths %}
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>{{ item }}</span>
+                </li>
+                {% endfor %}
+                {% if not strengths %}
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Demonstrated solid foundational response structure.</span>
+                </li>
+                {% endif %}
+            </ul>
+
+        </div>
+
+        <!-- Areas to Improve -->
+        <div class="analysis-card improvements-card">
+
+            <div class="card-header">
+                <div class="card-icon arrow-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                <h2>Areas to Improve</h2>
+            </div>
+
+            <ul class="analysis-list">
+                {% for item in improvements %}
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>{{ item }}</span>
+                </li>
+                {% endfor %}
+                {% if not improvements %}
+                <li>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>Elaborate further on architectural design trade-offs.</span>
+                </li>
+                {% endif %}
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Question-wise Feedback Section -->
+    {% if question_feedback %}
+    <div class="feedback-card q-feedback-card">
+
+        <div class="card-header">
+            <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h2>Question-wise Feedback</h2>
+        </div>
+
+        <div class="q-feedback-grid">
+            {% for item in question_feedback %}
+            <div class="q-feedback-box">
+                <div class="q-feedback-head">
+                    <span class="q-badge">Q{{ item.question_num if item.question_num else loop.index }}</span>
+                    <span class="q-title">{{ item.question }}</span>
+                    {% if item.score is defined and item.score is not none %}
+                    <span class="q-score {% if item.score >= 60 %}high{% elif item.score >= 30 %}med{% else %}low{% endif %}">
+                        {{ item.score }}%
+                    </span>
+                    {% endif %}
+                </div>
+                <div class="q-user-ans">
+                    <strong>Your Answer:</strong> {{ item.answer }}
+                </div>
+                <div class="q-eval-text">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>{{ item.feedback }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    {% endif %}
+
+
+
+    <!-- ===== PRACTICE MORE / COMPLETION SECTION ===== -->
+
+    {% if all_completed %}
+
+    <!-- All questions finished — completion message -->
+    <div class="completion-card">
+        <div class="completion-icon">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+        <h2>All Questions Completed!</h2>
+        <p>You have successfully completed all interview questions for this role.<br>
+           Excellent work — keep practising to sharpen your skills further!</p>
+        <a href="/" class="primary-btn" id="backHomeCompletedBtn">
+            <i class="fa-solid fa-house"></i>
+            Back to Home
+        </a>
+    </div>
+
+    {% elif can_practice_more %}
+
+    <!-- Ask user: practice more? -->
+    <div class="practice-prompt-card">
+        <div class="practice-prompt-icon">
+            <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <h2>Do you want to practice more questions?</h2>
+        <p>Continue with a fresh set of role-specific questions — no repeats!</p>
+        <div class="practice-prompt-buttons">
+            <a href="/practice-more/{{ session_id }}" class="prompt-yes-btn" id="yesBtn">
+                <i class="fa-solid fa-circle-check"></i>
+                Yes
+            </a>
+            <a href="/" class="prompt-no-btn" id="noBtn">
+                <i class="fa-solid fa-circle-xmark"></i>
+                No
+            </a>
+        </div>
+    </div>
+
+    {% else %}
+
+    <!-- No more questions in pool -->
+    <div class="completion-card">
+        <div class="completion-icon">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+        <h2>All Questions Completed!</h2>
+        <p>You have successfully completed all interview questions for this role.<br>
+           Excellent work — keep practising to sharpen your skills further!</p>
+        <a href="/" class="primary-btn" id="backHomeBtn">
+            <i class="fa-solid fa-house"></i>
+            Back to Home
+        </a>
+    </div>
+
+    {% endif %}
+
+    <!-- Always visible Back to Home button -->
+    {% if can_practice_more and not all_completed %}
+    <div class="button-group">
+        <a href="/" class="secondary-btn" id="homeBtn">
+            <i class="fa-solid fa-house"></i>
+            Back to Home
+        </a>
+    </div>
+    {% endif %}
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="result-footer">
+    <p>© 2026 Saranya Tripurari. All rights reserved.</p>
+</footer>
+
+
+
+<script src="/static/js/result.js"></script>
+
+</body>
+
+</html>

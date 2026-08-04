@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aiLogoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="60%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="aiSparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#312E81" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect x="6" y="6" width="88" height="88" rx="24" fill="url(#aiLogoBg)" filter="url(#logoShadow)"/>
+
+  <!-- AI Brain / Sparkle Emblem -->
+  <path d="M50 20 C50 35 65 50 80 50 C65 50 50 65 50 80 C50 65 35 50 20 50 C35 50 50 35 50 20 Z" fill="url(#aiSparkGrad)"/>
+  
+  <!-- Circuit/Node Accent Dots -->
+  <circle cx="50" cy="50" r="5" fill="#2563EB"/>
+  <circle cx="27" cy="27" r="3.5" fill="#93C5FD"/>
+  <circle cx="73" cy="27" r="3.5" fill="#93C5FD"/>
+  <circle cx="73" cy="73" r="3.5" fill="#93C5FD"/>
+  <circle cx="27" cy="73" r="3.5" fill="#93C5FD"/>
+</svg>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI Interview Preparation Assistant — Practice technical and HR interview questions with instant AI feedback and improve your confidence before real interviews.">
+
+    <title>AI Interview Preparation Assistant</title>
+
+    <link rel="icon" href="/static/images/logo.svg">
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Landing Stylesheet -->
+    <link rel="stylesheet" href="/static/css/landing.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="logo">
+            <img src="/static/images/logo.svg" alt="Interview Assistant Logo"
+                class="logo-img">
+            <span>Interview Assistant</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-left" data-aos="fade-right">
+
+            <span class="section-tag">AI-Powered Interview Preparation</span>
+
+            <h1>Prepare for Your Next Interview</h1>
+
+            <p class="hero-desc">
+                Practice technical and HR interview questions with instant AI feedback and improve your confidence
+                before real interviews.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#interview" class="primary-btn">
+                    Start Interview
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right" data-aos="fade-left">
+
+            <div class="hero-img-container">
+                <img src="/static/images/hero.svg" alt="Hero Illustration" class="hero-img">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-container" data-aos="fade-up">
+
+            <div class="about-column about-left">
+                <span class="section-tag">Student Project</span>
+                <h2>About This Project</h2>
+                <p>
+                    This AI Interview Preparation Assistant was developed by an Artificial Intelligence and Machine
+                    Learning student to help students and job seekers prepare for technical interviews in a simple and
+                    effective way.
+                </p>
+                <p>
+                    The platform provides role-based interview questions, AI-powered evaluation, offline scoring, and
+                    detailed feedback to help users improve their interview performance and confidence.
+                </p>
+                <p>
+                    It is designed with FastAPI, Python, JavaScript, HTML, CSS, and Google Gemini AI while also
+                    supporting offline evaluation for uninterrupted practice.
+                </p>
+            </div>
+
+            <div class="about-column about-right">
+                <div class="about-info-card">
+                    <div class="info-card-header">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3>AI & ML Student Project</h3>
+                    </div>
+                    <ul class="info-card-list">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Built with FastAPI, Python & Gemini AI</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Role-specific technical & HR question banks</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Instant performance scoring & feedback</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Offline fallback for uninterrupted practice</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features" id="features">
+
+        <div class="section-header" data-aos="fade-up">
+            <h2>Features</h2>
+            <p class="section-desc">Everything you need to prepare for your upcoming technical and HR interviews.</p>
+        </div>
+
+        <div class="feature-grid">
+
+            <a href="/features/ai-evaluation" class="feature-card" data-aos="fade-up">
+                <div class="feature-content">
+                    <h3>AI Evaluation</h3>
+                    <p>
+                        Intelligent answer analysis powered by Google Gemini AI.
+                    </p>
+                </div>
+                <i class="fa-solid fa-arrow-right feature-arrow"></i>
+            </a>
+
+            <a href="/features/job-roles" class="feature-card" data-aos="fade-up">
+                <div class="feature-content">
+                    <h3>20+ Job Roles</h3>
+                    <p>
+                        Role-specific question sets across software engineering, data, and management.
+                    </p>
+                </div>
+                <i class="fa-solid fa-arrow-right feature-arrow"></i>
+            </a>
+
+            <a href="/features/instant-feedback" class="feature-card" data-aos="fade-up">
+                <div class="feature-content">
+                    <h3>Instant Feedback</h3>
+                    <p>
+                        Immediate scores, strengths breakdown, and actionable improvement suggestions.
+                    </p>
+                </div>
+                <i class="fa-solid fa-arrow-right feature-arrow"></i>
+            </a>
+
+            <a href="/features/offline-evaluation" class="feature-card" data-aos="fade-up">
+                <div class="feature-content">
+                    <h3>Offline Evaluation</h3>
+                    <p>
+                        Built-in offline engine ensures uninterrupted mock interview evaluation.
+                    </p>
+                </div>
+                <i class="fa-solid fa-arrow-right feature-arrow"></i>
+            </a>
+
+            <a href="/features/technical-questions" class="feature-card" data-aos="fade-up">
+                <div class="feature-content">
+                    <h3>Technical Questions</h3>
+                    <p>
+                        Coding concepts, system architecture, data structures, and algorithms.
+                    </p>
+                </div>
+                <i class="fa-solid fa-arrow-right feature-arrow"></i>
+            </a>
+
+            <a href="/features/hr-questions" class="feature-card" data-aos="fade-up">
+                <div class="feature-content">
+                    <h3>HR Questions</h3>
+                    <p>
+                        Behavioral and situational questions to improve communication skills.
+                    </p>
+                </div>
+                <i class="fa-solid fa-arrow-right feature-arrow"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INTERVIEW START SECTION ================= -->
+
+    <section class="interview-section" id="interview">
+
+        <div class="interview-card" data-aos="fade-up">
+
+            <div class="interview-card-header">
+                <span class="form-tag"><i class="fa-solid fa-circle-play"></i> Mock Assessment Setup</span>
+                <h2>Start Your Practice Session</h2>
+                <p>Select your job role and experience level to launch your customized interview session.</p>
+            </div>
+
+            <form action="/start-interview" method="post" id="startForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="role">
+                            <i class="fa-solid fa-briefcase"></i>
+                            Target Job Role
+                        </label>
+                        <div class="select-wrapper">
+                            <select name="role" id="role" required>
+                                <optgroup label="Engineering">
+                                    <option value="Software Engineer">Software Engineer</option>
+                                    <option value="Python Developer">Python Developer</option>
+                                    <option value="Java Developer">Java Developer</option>
+                                    <option value="Full Stack Developer">Full Stack Developer</option>
+                                    <option value="Frontend Developer">Frontend Developer</option>
+                                    <option value="Backend Developer">Backend Developer</option>
+                                    <option value="React Developer">React Developer</option>
+                                    <option value="Node.js Developer">Node.js Developer</option>
+                                    <option value="Android Developer">Android Developer</option>
+                                </optgroup>
+                                <optgroup label="AI / Data">
+                                    <option value="AI Engineer">AI Engineer</option>
+                                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                                    <option value="Data Scientist">Data Scientist</option>
+                                    <option value="Data Analyst">Data Analyst</option>
+                                    <option value="SQL Developer">SQL Developer</option>
+                                </optgroup>
+                                <optgroup label="Infrastructure">
+                                    <option value="DevOps Engineer">DevOps Engineer</option>
+                                    <option value="Cloud Engineer">Cloud Engineer</option>
+                                    <option value="Cyber Security Engineer">Cyber Security Engineer</option>
+                                </optgroup>
+                                <optgroup label="Quality & Design">
+                                    <option value="QA Engineer">QA Engineer</option>
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                    <option value="Product Manager">Product Manager</option>
+                                </optgroup>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Experience Level
+                        </label>
+                        <div class="select-wrapper">
+                            <select name="experience" id="experience" required>
+                                <option value="Fresher (0 years)">Fresher (0 years)</option>
+                                <option value="Junior (0–2 years)">Junior (0–2 years)</option>
+                                <option value="Mid-Level (3–5 years)">Mid-Level (3–5 years)</option>
+                                <option value="Senior (5+ years)">Senior (5+ years)</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-info-pill">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>20 Non-Repeating Questions &bull; Gemini AI & Offline Scoring &bull; 30 Min Countdown</span>
+                </div>
+
+                <button type="submit" class="start-btn" id="startBtn">
+                    <span>Start Interview Session</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-header" data-aos="fade-up">
+            <h2>Let's Connect</h2>
+            <p class="section-desc">
+                I'm always open to discussing projects, internships, job opportunities, and collaborations. Feel free to
+                reach out through any of the platforms below.
+            </p>
+        </div>
+
+        <div class="contact-grid" data-aos="fade-up">
+
+            <!-- Card 1 – Email -->
+            <div class="contact-card" id="contact-email">
+                <div class="contact-card-top">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                </div>
+                <p class="contact-desc">
+                    Contact me for project discussions, internships, collaborations, or any queries.
+                </p>
+                <div class="contact-value">saranyatripurari@gmail.com</div>
+                <a href="mailto:saranyatripurari@gmail.com" class="contact-btn">
+                    Contact via Email
+                </a>
+            </div>
+
+            <!-- Card 2 – GitHub -->
+            <div class="contact-card" id="contact-github">
+                <div class="contact-card-top">
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                </div>
+                <p class="contact-desc">
+                    Explore my projects, source code, and open-source contributions.
+                </p>
+                <div class="contact-value">saranyatripurari</div>
+                <a href="https://github.com/saranyatripurari" target="_blank" rel="noopener noreferrer"
+                    class="contact-btn">
+                    View GitHub
+                </a>
+            </div>
+
+            <!-- Card 3 – LinkedIn -->
+            <div class="contact-card" id="contact-linkedin">
+                <div class="contact-card-top">
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                </div>
+                <p class="contact-desc">
+                    Connect with me professionally and stay updated with my latest work and achievements.
+                </p>
+                <div class="contact-value">saranya-tripurari-85b5762a2</div>
+                <a href="https://linkedin.com/in/saranya-tripurari-85b5762a2" target="_blank" rel="noopener noreferrer"
+                    class="contact-btn">
+                    Connect on LinkedIn
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+            <p class="copyright">© 2026 Saranya Tripurari. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:saranyatripurari@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </a>
+                <a href="https://github.com/saranyatripurari" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/saranya-tripurari-85b5762a2" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="/static/js/landing.js"></script>
+
+</body>
+
+</html>

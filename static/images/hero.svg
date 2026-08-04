@@ -1,0 +1,182 @@
+<svg viewBox="0 0 640 520" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Soft Shadows -->
+    <filter id="heroShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#1E1B4B" flood-opacity="0.10" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#2563EB" flood-opacity="0.06" />
+    </filter>
+
+    <filter id="floatCardShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#312E81" flood-opacity="0.12" />
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="60%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#F3E8FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#EEF2FF" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="cardHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glowing Background Elements -->
+  <rect x="20" y="20" width="600" height="480" rx="32" fill="url(#bgGlow)"/>
+  <circle cx="520" cy="90" r="110" fill="#818CF8" opacity="0.15"/>
+  <circle cx="100" cy="420" r="90" fill="#38BDF8" opacity="0.15"/>
+  <circle cx="320" cy="260" r="180" fill="#C084FC" opacity="0.08"/>
+
+  <!-- Main SaaS Virtual Interview Dashboard Frame -->
+  <rect x="50" y="50" width="540" height="390" rx="22" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#heroShadow)"/>
+
+  <!-- Top Window Titlebar -->
+  <rect x="50" y="50" width="540" height="52" rx="22" fill="#FAFAFA"/>
+  <rect x="50" y="82" width="540" height="20" fill="#FAFAFA"/>
+  <line x1="50" y1="102" x2="590" y2="102" stroke="#F1F5F9" stroke-width="1.5"/>
+
+  <!-- Mac Window Dots -->
+  <circle cx="82" cy="76" r="5.5" fill="#FF5F56"/>
+  <circle cx="100" cy="76" r="5.5" fill="#FFBD2E"/>
+  <circle cx="118" cy="76" r="5.5" fill="#27C93F"/>
+
+  <!-- Window Header Title -->
+  <rect x="146" y="66" width="210" height="20" rx="10" fill="#EDF2F7"/>
+  <text x="251" y="80" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">AI Interview Session • Real-time Feedback</text>
+
+  <!-- Live Status Pill Badge -->
+  <rect x="460" y="64" width="110" height="24" rx="12" fill="url(#primaryGradient)"/>
+  <circle cx="476" cy="76" r="4" fill="#34D399">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="518" y="80" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">AI LIVE ACTIVE</text>
+
+  <!-- ================= LEFT COLUMN: Video Stream & Voice Analytics ================= -->
+  <g transform="translate(74, 120)">
+    <!-- Video Container -->
+    <rect x="0" y="0" width="220" height="150" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    
+    <!-- Virtual Interviewer AI Avatar Graphic -->
+    <circle cx="110" cy="62" r="30" fill="url(#primaryGradient)"/>
+    <!-- Headset arc -->
+    <path d="M 86 62 A 24 24 0 0 1 134 62" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="83" y="58" width="6" height="12" rx="3" fill="#38BDF8"/>
+    <rect x="131" y="58" width="6" height="12" rx="3" fill="#38BDF8"/>
+    <!-- Mic boom -->
+    <path d="M 134 66 L 122 76" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="120" cy="77" r="3" fill="#38BDF8"/>
+
+    <!-- Avatar Shoulder -->
+    <path d="M 65 125 C 65 98, 155 98, 155 125 Z" fill="#1E293B"/>
+
+    <!-- AI Voice Waveform Overlay -->
+    <rect x="12" y="112" width="196" height="28" rx="8" fill="#1E293B" fill-opacity="0.85"/>
+    <text x="24" y="130" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#94A3B8">AI VOICE</text>
+    <!-- Waveform Bars -->
+    <rect x="75" y="120" width="3" height="12" rx="1.5" fill="#38BDF8"/>
+    <rect x="82" y="116" width="3" height="20" rx="1.5" fill="#818CF8"/>
+    <rect x="89" y="122" width="3" height="8" rx="1.5" fill="#C084FC"/>
+    <rect x="96" y="114" width="3" height="24" rx="1.5" fill="#38BDF8"/>
+    <rect x="103" y="118" width="3" height="16" rx="1.5" fill="#818CF8"/>
+    <rect x="110" y="112" width="3" height="28" rx="1.5" fill="#C084FC"/>
+    <rect x="117" y="116" width="3" height="20" rx="1.5" fill="#38BDF8"/>
+    <rect x="124" y="121" width="3" height="10" rx="1.5" fill="#818CF8"/>
+    <rect x="131" y="115" width="3" height="22" rx="1.5" fill="#C084FC"/>
+
+    <!-- Audio Level Score -->
+    <rect x="148" y="120" width="50" height="14" rx="7" fill="#312E81"/>
+    <text x="173" y="131" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#A7F3D0" text-anchor="middle">CLEAR</text>
+
+    <!-- Speech Confidence Card below video -->
+    <rect x="0" y="162" width="220" height="138" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="16" y="184" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#1E293B">Real-time AI Metrics</text>
+    
+    <!-- Metric 1: Technical Precision -->
+    <text x="16" y="206" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#64748B">Technical Precision</text>
+    <text x="195" y="206" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#2563EB" text-anchor="end">94%</text>
+    <rect x="16" y="212" width="188" height="6" rx="3" fill="#E2E8F0"/>
+    <rect x="16" y="212" width="176" height="6" rx="3" fill="url(#primaryGradient)"/>
+
+    <!-- Metric 2: Confidence & Communication -->
+    <text x="16" y="238" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#64748B">Communication &amp; Clarity</text>
+    <text x="195" y="238" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#7C3AED" text-anchor="end">98%</text>
+    <rect x="16" y="244" width="188" height="6" rx="3" fill="#E2E8F0"/>
+    <rect x="16" y="244" width="184" height="6" rx="3" fill="url(#accentPurple)"/>
+
+    <!-- Metric 3: Pace & Tone -->
+    <text x="16" y="270" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#64748B">Response Quality</text>
+    <text x="195" y="270" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#059669" text-anchor="end">Optimal</text>
+    <rect x="16" y="276" width="188" height="6" rx="3" fill="#E2E8F0"/>
+    <rect x="16" y="276" width="168" height="6" rx="3" fill="#10B981"/>
+  </g>
+
+  <!-- ================= RIGHT COLUMN: Question & Live Response Card ================= -->
+  <g transform="translate(314, 120)">
+    <!-- Question Container -->
+    <rect x="0" y="0" width="252" height="106" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <rect x="14" y="14" width="98" height="20" rx="6" fill="#EFF6FF"/>
+    <text x="63" y="28" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#2563EB" text-anchor="middle">QUESTION 02 / 20</text>
+    
+    <text x="14" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#0F172A">System Architecture &amp; Scale</text>
+    <text x="14" y="69" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#475569">"How do you optimize REST APIs for low</text>
+    <text x="14" y="83" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#475569">latency under high concurrent traffic?"</text>
+
+    <!-- Response Container -->
+    <rect x="0" y="118" width="252" height="132" rx="14" fill="#FFFFFF" stroke="#6366F1" stroke-width="1.5"/>
+    <rect x="14" y="132" width="224" height="66" rx="8" fill="#F8FAFC"/>
+    <text x="24" y="148" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#1E293B">I implement Redis caching, asynchronous</text>
+    <text x="24" y="162" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#1E293B">event queues, and database indexing to</text>
+    <text x="24" y="176" font-family="'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#1E293B">drastically reduce response latency...</text>
+    
+    <!-- Blinking Cursor -->
+    <rect x="216" y="166" width="2" height="12" fill="#4F46E5">
+      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Submit Action Button inside Mock UI -->
+    <rect x="136" y="206" width="102" height="32" rx="8" fill="url(#primaryGradient)"/>
+    <text x="187" y="226" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Submit Answer →</text>
+  </g>
+
+  <!-- ================= FLOATING BADGES FOR AI EFFECT ================= -->
+  <!-- Top Right Floating AI Score Badge -->
+  <g transform="translate(420, 25)" filter="url(#floatCardShadow)">
+    <rect x="0" y="0" width="195" height="64" rx="16" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="1.5"/>
+    
+    <!-- Star Icon in Gradient Circle -->
+    <circle cx="34" cy="32" r="18" fill="url(#primaryGradient)"/>
+    <path d="M34 22 L36.8 28.5 L43.5 29.2 L38.4 33.7 L40 40.5 L34 37 L28 40.5 L29.6 33.7 L24.5 29.2 L31.2 28.5 Z" fill="#FFFFFF"/>
+    
+    <text x="62" y="28" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#0F172A">Instant AI Feedback</text>
+    <text x="62" y="44" font-family="'Inter', sans-serif" font-size="9.5" font-weight="600" fill="#4F46E5">Detailed Performance Insights</text>
+  </g>
+
+  <!-- Bottom Left Floating Analytics Badge -->
+  <g transform="translate(25, 375)" filter="url(#floatCardShadow)">
+    <rect x="0" y="0" width="185" height="58" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="30" cy="29" r="16" fill="#ECFDF5"/>
+    <path d="M 23 31 L 28 36 L 37 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="54" y="26" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#0F172A">AI Match Score</text>
+    <text x="54" y="42" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#059669">98% Strong Readiness</text>
+  </g>
+
+</svg>

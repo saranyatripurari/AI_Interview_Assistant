@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instant Feedback — Get immediate scores, strength breakdowns, and actionable improvement suggestions after every mock interview session.">
+    <title>Instant Feedback — Interview Assistant</title>
+
+    <link rel="icon" href="/static/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/feature_detail.css">
+
+    <style>
+        .score-preview {
+            background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+            border: 1px solid #BFDBFE;
+            border-radius: var(--radius-xl);
+            padding: 36px 40px;
+            max-width: 520px;
+        }
+        .score-preview-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .score-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563EB, #3B82F6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: #FFFFFF;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+        }
+        .score-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .feedback-preview-pills {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-primary);
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 10px 14px;
+        }
+        .pill.green i { color: #16A34A; }
+        .pill.blue  i { color: #2563EB; }
+        .pill.amber i { color: #D97706; }
+        .preview-section {
+            padding: 80px 32px;
+            max-width: 1240px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 64px;
+        }
+        @media (max-width: 768px) {
+            .preview-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="/" class="logo">
+            <img src="/static/images/logo.svg" alt="Interview Assistant Logo" class="logo-img">
+            <span>Interview Assistant</span>
+        </a>
+        <nav>
+            <a href="/#home">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#features">Features</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+        <a href="/#interview" class="nav-cta">Start Interview</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="feature-hero">
+
+        <div class="feature-hero-left">
+            <a href="/" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+            <span class="feature-tag">Feature</span>
+            <h1>Instant Feedback</h1>
+            <p class="hero-desc">
+                No waiting, no ambiguity. Submit your answers and receive a detailed performance score, your key strengths, and specific improvements — all in seconds.
+            </p>
+            <a href="/#interview" class="feature-hero-cta">
+                Get Feedback Now <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="feature-hero-right">
+            <div class="illustration-wrap">
+                <i class="fa-solid fa-chart-line illustration-icon"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SCORE PREVIEW -->
+    <section class="preview-section">
+        <div>
+            <span class="fd-section-label">Sample Result</span>
+            <h2 class="fd-section-title">What Your Feedback Looks Like</h2>
+            <p class="fd-section-desc">After each mock session, you receive a clear, structured report with actionable insights.</p>
+        </div>
+        <div class="score-preview">
+            <div class="score-preview-top">
+                <div>
+                    <div style="font-size:18px;font-weight:800;color:#0F172A;margin-bottom:4px;">Session Complete</div>
+                    <div class="score-label">Software Engineer · Fresher</div>
+                </div>
+                <div class="score-circle">82%</div>
+            </div>
+            <div class="feedback-preview-pills">
+                <div class="pill green">
+                    <i class="fa-solid fa-check-circle"></i>
+                    Strong understanding of OOP principles
+                </div>
+                <div class="pill green">
+                    <i class="fa-solid fa-check-circle"></i>
+                    Good use of real-world examples
+                </div>
+                <div class="pill amber">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Deepen knowledge of system design patterns
+                </div>
+                <div class="pill blue">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Practice STAR method for behavioral answers
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <div class="fd-section-alt">
+        <div class="fd-section-alt-inner">
+            <span class="fd-section-label">Benefits</span>
+            <h2 class="fd-section-title">Why Instant Feedback Matters</h2>
+            <p class="fd-section-desc">Learning is most effective immediately after performance. Instant feedback closes the gap between doing and improving.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <h3>Zero Waiting Time</h3>
+                    <p>Results appear the moment you submit — no delays, no manual review, no email to wait for.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Strengths Highlighted</h3>
+                    <p>Know exactly what you did right so you can replicate those strong patterns in real interviews.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Clear Improvement Areas</h3>
+                    <p>Each session tells you precisely what to work on — no vague advice, just specific, actionable guidance.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-percent"></i></div>
+                    <h3>Percentage Score</h3>
+                    <p>Track your performance quantitatively and aim to improve your score across practice sessions.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3>Overall Summary</h3>
+                    <p>Receive a holistic written summary that ties together your performance across all 20 answers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-repeat"></i></div>
+                    <h3>Practice Again Immediately</h3>
+                    <p>One click on Practice More loads the next set of questions so your momentum never breaks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="fd-section">
+        <span class="fd-section-label">How It Works</span>
+        <h2 class="fd-section-title">From Session to Score in Seconds</h2>
+        <p class="fd-section-desc">A transparent breakdown of how your results are generated and delivered.</p>
+
+        <div class="steps-list">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-body">
+                    <h3>Complete 20 Questions</h3>
+                    <p>Answer all 20 interview questions for your selected role. You can skip or revisit as needed before submitting.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-body">
+                    <h3>Submit Your Session</h3>
+                    <p>Click Submit to send your answers to the AI evaluation engine. The system begins processing immediately.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-body">
+                    <h3>AI Evaluates All Answers</h3>
+                    <p>Google Gemini AI analyzes each answer for correctness, clarity, and relevance, then generates a holistic score.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-body">
+                    <h3>View Your Results Page</h3>
+                    <p>Your results page loads instantly with your score, strengths, improvements, and an overall feedback summary.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fd-cta-section">
+        <div class="fd-cta-inner">
+            <h2>See Your Score in Seconds</h2>
+            <p>Start a session now and get instant, intelligent feedback that accelerates your interview preparation.</p>
+            <div class="fd-cta-buttons">
+                <a href="/#interview" class="fd-cta-btn">
+                    Start Interview <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="/" class="fd-back-home-btn">
+                    <i class="fa-solid fa-house"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p class="copyright">© 2026 Saranya Tripurari. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:saranyatripurari@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://github.com/saranyatripurari" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/saranya-tripurari-85b5762a2" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/feature_detail.js"></script>
+</body>
+
+</html>

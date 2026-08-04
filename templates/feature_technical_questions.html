@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical Questions — Practice coding concepts, system design, data structures, algorithms, and technology-specific questions for your target role.">
+    <title>Technical Questions — Interview Assistant</title>
+
+    <link rel="icon" href="/static/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/feature_detail.css">
+
+    <style>
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .topic-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 20px 18px;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+        .topic-item:hover {
+            border-color: #BFDBFE;
+            background-color: #EFF6FF;
+            transform: translateY(-2px);
+        }
+        .topic-item i {
+            font-size: 28px;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+            display: block;
+        }
+        .topic-item span {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .sample-q {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary-accent);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        .sample-q strong {
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary-accent);
+            display: block;
+            margin-bottom: 4px;
+        }
+        @media (max-width: 1024px) { .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px)  { .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="/" class="logo">
+            <img src="/static/images/logo.svg" alt="Interview Assistant Logo" class="logo-img">
+            <span>Interview Assistant</span>
+        </a>
+        <nav>
+            <a href="/#home">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#features">Features</a>
+            <a href="/#contact">Contact</a>
+        </nav>
+        <a href="/#interview" class="nav-cta">Start Interview</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="feature-hero">
+
+        <div class="feature-hero-left">
+            <a href="/" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+            <span class="feature-tag">Feature</span>
+            <h1>Technical Questions</h1>
+            <p class="hero-desc">
+                Sharpen your technical edge with curated questions covering data structures, algorithms, system design, coding concepts, and role-specific technology stacks — calibrated to your experience level.
+            </p>
+            <a href="/#interview" class="feature-hero-cta">
+                Start Technical Mock <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="feature-hero-right">
+            <div class="illustration-wrap">
+                <i class="fa-solid fa-code illustration-icon"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- TOPICS -->
+    <div class="fd-section-alt">
+        <div class="fd-section-alt-inner">
+            <span class="fd-section-label">Topics Covered</span>
+            <h2 class="fd-section-title">What You'll Be Asked</h2>
+            <p class="fd-section-desc">Technical questions span the full breadth of what real-world interviewers assess for each role.</p>
+
+            <div class="topic-grid">
+                <div class="topic-item">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <span>Data Structures</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Algorithms</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-server"></i>
+                    <span>System Design</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-cubes"></i>
+                    <span>OOP Concepts</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-database"></i>
+                    <span>Databases &amp; SQL</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span>Networking</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <span>Version Control</span>
+                </div>
+                <div class="topic-item">
+                    <i class="fa-solid fa-cloud"></i>
+                    <span>Cloud &amp; DevOps</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SAMPLE QUESTIONS -->
+    <section class="fd-section">
+        <span class="fd-section-label">Sample Questions</span>
+        <h2 class="fd-section-title">The Kind of Questions You'll Face</h2>
+        <p class="fd-section-desc">Here's a preview of the depth and variety of technical questions in the platform.</p>
+
+        <div class="sample-q">
+            <strong>Software Engineer · Mid-Level</strong>
+            Explain the difference between a stack and a queue. When would you use each data structure in a real application?
+        </div>
+        <div class="sample-q">
+            <strong>Machine Learning Engineer · Senior</strong>
+            Describe the bias-variance tradeoff. How do you diagnose and address high bias or high variance in a model?
+        </div>
+        <div class="sample-q">
+            <strong>DevOps Engineer · Junior</strong>
+            What is a Docker container and how is it different from a virtual machine? What are the advantages of containerization?
+        </div>
+        <div class="sample-q">
+            <strong>Full Stack Developer · Fresher</strong>
+            What is the difference between SQL and NoSQL databases? Give examples of when to use each.
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <div class="fd-section-alt">
+        <div class="fd-section-alt-inner">
+            <span class="fd-section-label">Benefits</span>
+            <h2 class="fd-section-title">Why Practice Technical Questions Here</h2>
+            <p class="fd-section-desc">Technical interview preparation requires realistic, well-curated questions with expert feedback.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-crosshairs"></i></div>
+                    <h3>Role-Specific Coverage</h3>
+                    <p>Questions are tailored to your exact role — a Data Scientist won't be asked React questions.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Difficulty Scaling</h3>
+                    <p>Questions scale from conceptual Fresher-level to complex Senior-level scenarios.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>AI-Graded Accuracy</h3>
+                    <p>Gemini AI checks technical correctness and conceptual depth, not just surface keywords.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h3>Broad Topic Coverage</h3>
+                    <p>Each session covers a mix of topics so you don't get siloed into practicing one area only.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-file-code"></i></div>
+                    <h3>Conceptual + Applied</h3>
+                    <p>A healthy mix of theory questions and scenario-based applied technical problems.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Timed Practice</h3>
+                    <p>A 30-minute countdown simulates real interview pressure so you build speed alongside accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="fd-section">
+        <span class="fd-section-label">How It Works</span>
+        <h2 class="fd-section-title">Technical Prep, Made Structured</h2>
+        <p class="fd-section-desc">Each session is designed to replicate the breadth of a real technical interview round.</p>
+
+        <div class="steps-list">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-body">
+                    <h3>Select Your Technical Role</h3>
+                    <p>Choose a role like Software Engineer, AI Engineer, or DevOps. The question pool is pre-populated with relevant technical topics.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-body">
+                    <h3>20 Mixed Technical Questions</h3>
+                    <p>Each session includes a blend of conceptual, applied, and scenario-based questions from across the topic spectrum for your role.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-body">
+                    <h3>Answer Under Timed Conditions</h3>
+                    <p>A 30-minute countdown runs during the session, encouraging concise, focused answers under realistic pressure.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-body">
+                    <h3>Receive Technical Feedback</h3>
+                    <p>AI evaluation specifically checks technical accuracy, identifies conceptual gaps, and suggests topics to study further.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fd-cta-section">
+        <div class="fd-cta-inner">
+            <h2>Ace Your Technical Round</h2>
+            <p>Start a technical mock interview now and find out exactly where you stand and what to improve.</p>
+            <div class="fd-cta-buttons">
+                <a href="/#interview" class="fd-cta-btn">
+                    Start Technical Interview <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="/" class="fd-back-home-btn">
+                    <i class="fa-solid fa-house"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p class="copyright">© 2026 Saranya Tripurari. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:saranyatripurari@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://github.com/saranyatripurari" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/saranya-tripurari-85b5762a2" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/feature_detail.js"></script>
+</body>
+
+</html>
