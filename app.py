@@ -69,10 +69,7 @@ QUESTIONS_PER_ROUND = 20
 async def landing(request: Request):
     """Landing page."""
     try:
-        return templates.TemplateResponse(
-            "landing.html",
-            {"request": request}
-        )
+        return templates.TemplateResponse(request, "landing.html")
     except Exception as e:
         print(f"[ERROR] Landing page: {e}")
         return HTMLResponse("<h1>Service temporarily unavailable. Please try again.</h1>", status_code=500)
@@ -85,37 +82,37 @@ async def landing(request: Request):
 @app.get("/features/ai-evaluation", response_class=HTMLResponse)
 async def feature_ai_evaluation(request: Request):
     """AI Evaluation feature detail page."""
-    return templates.TemplateResponse("feature_ai_evaluation.html", {"request": request})
+    return templates.TemplateResponse(request, "feature_ai_evaluation.html")
 
 
 @app.get("/features/job-roles", response_class=HTMLResponse)
 async def feature_job_roles(request: Request):
     """20+ Job Roles feature detail page."""
-    return templates.TemplateResponse("feature_job_roles.html", {"request": request})
+    return templates.TemplateResponse(request, "feature_job_roles.html")
 
 
 @app.get("/features/instant-feedback", response_class=HTMLResponse)
 async def feature_instant_feedback(request: Request):
     """Instant Feedback feature detail page."""
-    return templates.TemplateResponse("feature_instant_feedback.html", {"request": request})
+    return templates.TemplateResponse(request, "feature_instant_feedback.html")
 
 
 @app.get("/features/offline-evaluation", response_class=HTMLResponse)
 async def feature_offline_evaluation(request: Request):
     """Offline Evaluation feature detail page."""
-    return templates.TemplateResponse("feature_offline_evaluation.html", {"request": request})
+    return templates.TemplateResponse(request, "feature_offline_evaluation.html")
 
 
 @app.get("/features/technical-questions", response_class=HTMLResponse)
 async def feature_technical_questions(request: Request):
     """Technical Questions feature detail page."""
-    return templates.TemplateResponse("feature_technical_questions.html", {"request": request})
+    return templates.TemplateResponse(request, "feature_technical_questions.html")
 
 
 @app.get("/features/hr-questions", response_class=HTMLResponse)
 async def feature_hr_questions(request: Request):
     """HR Questions feature detail page."""
-    return templates.TemplateResponse("feature_hr_questions.html", {"request": request})
+    return templates.TemplateResponse(request, "feature_hr_questions.html")
 
 
 @app.post("/start-interview")
@@ -178,9 +175,9 @@ async def interview(request: Request, session_id: str):
             return RedirectResponse("/")
 
         return templates.TemplateResponse(
+            request,
             "interview.html",
             {
-                "request": request,
                 "session_id": session_id,
                 "role": data["role"],
                 "experience": data.get("experience", ""),
@@ -246,9 +243,9 @@ async def result(request: Request, session_id: str):
         all_completed = data.get("all_completed", False)
 
         return templates.TemplateResponse(
+            request,
             "result.html",
             {
-                "request": request,
                 "session_id": session_id,
                 "role": data["role"],
                 "round": data.get("round", 1),
@@ -330,8 +327,8 @@ async def health():
 @app.exception_handler(404)
 async def not_found_handler(request: Request, exc: HTTPException):
     return templates.TemplateResponse(
+        request,
         "landing.html",
-        {"request": request},
         status_code=200
     )
 
