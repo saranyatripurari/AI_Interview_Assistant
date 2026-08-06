@@ -312,7 +312,6 @@ async def practice_more(request: Request, session_id: str):
         print(f"[ERROR] practice_more: {e}")
         return RedirectResponse("/")
 
-
 @app.get("/health")
 async def health():
     """Health check endpoint for deployment platforms."""
@@ -321,6 +320,7 @@ async def health():
         "service": "InterviewGPT AI",
         "version": "2.0.0"
     }
+
 
 
 # ============================================================
