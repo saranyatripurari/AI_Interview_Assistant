@@ -2,6 +2,10 @@
 
 This is an AI Interview Preparation Assistant developed to help students and job seekers practice interviews. Users can select their job role and experience level, answer interview questions, and get instant feedback on their performance.
 
+## Live Demo
+
+https://ai-interview-assistant-qvx8.onrender.com
+
 ## Features
 
 - Practice technical and HR interview questions
@@ -86,14 +90,6 @@ Open your browser and visit
 ```text
 http://127.0.0.1:8000
 ```
-
-## Live Demo
-
-https://ai-interview-assistant-qvx8.onrender.com
-
-## About the Project
-
-This project was developed to make interview preparation easier. It provides role-based interview questions, evaluates answers using AI, and gives useful feedback to help users improve their interview skills.
 
 ## Future Improvements
 
