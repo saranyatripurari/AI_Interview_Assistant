@@ -110,4 +110,4 @@ GitHub:
 https://github.com/saranyatripurari
 
 LinkedIn:
-https://linkedin.com/in/saranya-tripurari-85b5762a2
+https://linkedin.com/in/saranyatripurari
